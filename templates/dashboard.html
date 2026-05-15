@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Lead Dashboard</h2>
+
+    <form method="GET" class="mb-3">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Search"
+            class="form-control"
+        >
+
+    </form>
+
+    <table class="table table-bordered bg-white">
+
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Business</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for lead in leads %}
+
+        <tr>
+            <td>{{ lead.name }}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.phone }}</td>
+            <td>{{ lead.business_type }}</td>
+            <td>{{ lead.message }}</td>
+            <td>{{ lead.status }}</td>
+
+            <td>
+
+                <a href="/update/{{ lead.id }}/Contacted"
+                   class="btn btn-warning btn-sm">
+                   Contacted
+                </a>
+
+                <a href="/update/{{ lead.id }}/Closed"
+                   class="btn btn-success btn-sm">
+                   Closed
+                </a>
+
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

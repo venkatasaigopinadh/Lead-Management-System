@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lead Form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="card p-4 shadow">
+
+        <h2 class="mb-4 text-center">Lead Form</h2>
+
+        <form action="/submit" method="POST">
+
+            <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
+
+            <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
+
+            <input type="text" name="phone" class="form-control mb-3" placeholder="Phone Number" required>
+
+            <input type="text" name="business_type" class="form-control mb-3" placeholder="Business Type" required>
+
+            <textarea name="message" class="form-control mb-3" placeholder="Message" required></textarea>
+
+            <button class="btn btn-primary w-100">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
